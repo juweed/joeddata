@@ -1,0 +1,35 @@
+file_name,field_name,field_description,documentation,type
+disasters.csv,disaster_id,the unique ID for each natural disaster event record,,string
+disasters.csv,year,the year that the disaster took place,,integer
+disasters.csv,event_name,the name of the disaster,,string
+disasters.csv,location,the location(s) of the disaster,,string
+disasters.csv,disaster_group,the disaster group,http://www.emdat.be/classification,string
+disasters.csv,disaster_type,the disaster type,http://www.emdat.be/classification,string
+disasters.csv,disaster_subtype,the disaster subtype,http://www.emdat.be/classification,string
+disasters.csv,disaster_subsubtype,the disaster subsubtype,http://www.emdat.be/classification,string
+disasters.csv,associated_disaster,disaster occurrence that is associated with the record,,string
+disasters.csv,associated_disaster2,disaster occurrence that is associated with the record,,string
+disasters.csv,country_name,the country where the disaster occurred,,string
+disasters.csv,country_iso3,the iso3 code pertaining to the 'country_name' attribute,,string
+disasters.csv,start_isodate,the start date of the disaster in iso format (YYYY-MM-DD),https://en.wikipedia.org/wiki/ISO_8601,string
+disasters.csv,end_isodate,the end date of the disaster in iso format (YYYY-MM-DD),https://en.wikipedia.org/wiki/ISO_8601,string
+disasters.csv,no_killed,the number of persons killed in the disaster,http://www.emdat.be/explanatory-notes,integer
+disasters.csv,no_injured,"People suffering from physical injuries, trauma or an illness requiring immediate medical assistance as a direct result of a disaster.",http://www.emdat.be/explanatory-notes,integer
+disasters.csv,no_affected,"People requiring immediate assistance during a period of emergency, i.e. requiring basic survival needs such as food, water, shelter, sanitation and immediate medical assistance.",http://www.emdat.be/explanatory-notes,integer
+disasters.csv,no_homeless,"People suffering from physical injuries, trauma or an illness requiring immediate medical assistance as a direct result of a disaster.",http://www.emdat.be/explanatory-notes,integer
+disasters.csv,total_affected,"the sum of 'no_injured' and 'no_affected', and 'no_homeless' attributes",http://www.emdat.be/explanatory-notes,integer
+disasters.csv,total_dam_usd,"The amount of damage to property, crops, and livestock. The value of estimated damage is given in US$ (‘000). For each disaster, the registered figure corresponds to the damage value at the moment of the event, i.e. the figures are shown true to the year of the event.",http://www.emdat.be/explanatory-notes,float
+locations.csv,disaster_id,the unique ID for each natural disaster event record,,string
+locations.csv,disaster_location_id,unique disaster location identifier (disaster_id + '_' + geoname_id),,string
+locations.csv,precision_code,"the precision code most representative of the location, see documentation for code definitions",http://iatistandard.org/201/codelists/GeographicalPrecision/,integer
+locations.csv,geoname_id,the geoname id retrieved from http://geonames.org,http://www.geonames.org/,integer
+locations.csv,place_name,the name of a place (from geonames),,string
+locations.csv,latitude,latitude of a location in decimal degrees,,float
+locations.csv,longitude,longitude of a location in decimal degrees,,float
+locations.csv,location_type_code,one of the location type codes from http://www.geonames.org/export/codes.html,,string
+locations.csv,location_type_name,the location type name associated with the location type code,,string
+locations.csv,gazatteer_adm_code,"the hierarchical order of place, represented by geoname IDs, associated with the place name's geoname_id. Hierarchy is pipe delimited",,string
+locations.csv,gazatteer_adm_name,"the hierarchical order of place, represented by place names, associated with the place_name's geoname_id. Hierarchy is pipe delimited",,string
+locations.csv,location_class,"the location class code most representative of the location, see documentation for code definitions",http://iatistandard.org/201/codelists/GeographicLocationClass/,integer
+locations.csv,geographic_exactness,"the geographic exactness code most representative of the location, see documentation for code definitions",http://iatistandard.org/201/codelists/GeographicExactness/,integer
+disasters_locations_merged.csv,even_split_dam_usd,"total_dam, evenly divided between the number of location records (in locations.csv) pertaining to that disaster",,float
